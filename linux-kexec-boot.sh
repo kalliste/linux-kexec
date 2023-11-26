@@ -40,7 +40,6 @@ kexec_kernel() {
 
   # Execute kexec to boot into selected kernel
   echo "Booting to selected kernel..."
-  exit 0
   kexec -e
 }
 
