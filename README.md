@@ -12,7 +12,7 @@ This script provides an easy way for users to switch between installed Linux ker
 - **Kernel Listing**: Lists all available kernels, excluding rescue entries.
 - **Current Kernel Display**: Shows the current running kernel.
 - **User Input**: Prompts the user to select from available kernels or confirm the only available kernel.
-- **Automation**: Use `--latest` to boot to the latest installed kernel automaticly.
+- **Automation**: Use `--latest` to boot to latest installed kernel, or `--current` to boot to current running kernel automaticly. 
 
 ## Usage and Examples
 
@@ -66,6 +66,18 @@ Booting to latest kernel...
 Loading kernel: vmlinuz-6.2.0-36-generic
 Loading initrd: initrd.img-6.2.0-36-generic
 Booting to selected kernel...
+```
+
+Use `--current` argument to boot into current running kernel:
+
+```shell
+$ sudo linux-kexec-boot.sh --current
+Current running kernel is: 6.2.0-36-generic
+Booting to current running kernel...
+Loading kernel: vmlinuz-6.2.0-36-generic
+Loading initrd: initrd.img-6.2.0-36-generic
+Booting to selected kernel...
+
 ```
 
 Warm reboot into only installed kernel:
